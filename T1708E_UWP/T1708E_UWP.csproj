@@ -95,6 +95,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Data\ContactModel.cs" />
+    <Compile Include="Data\DataAccess.cs" />
+    <Compile Include="Entity\Contact.cs" />
     <Compile Include="Entity\ErrorResponse.cs" />
     <Compile Include="Entity\Member.cs" />
     <Compile Include="Entity\Song.cs" />
@@ -106,6 +109,9 @@
     <Compile Include="Service\ApiHandle.cs" />
     <Compile Include="Views\DemoGrid.xaml.cs">
       <DependentUpon>DemoGrid.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ListViewDemo.xaml.cs">
+      <DependentUpon>ListViewDemo.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\LoginForm.xaml.cs">
       <DependentUpon>LoginForm.xaml</DependentUpon>
@@ -150,6 +156,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\ListViewDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\LoginForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -168,6 +178,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Microsoft.Data.Sqlite">
+      <Version>1.1.1</Version>
+    </PackageReference>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.1.4</Version>
     </PackageReference>
